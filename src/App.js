@@ -10,7 +10,9 @@ function App() {
         <Header />
       </section>
       <section>
-        <AllArticles />
+        <Routes>
+          <Route path="/" element={<AllArticles />}></Route>
+        </Routes>
       </section>
     </div>
   );
