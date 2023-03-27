@@ -1,5 +1,4 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/system";
 import { useParams } from "react-router-dom";
@@ -9,11 +8,9 @@ import { Card } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Button } from "@mui/material";
-import { CardActions } from "@mui/material";
 import dayjs from "dayjs";
-
-import theme from "../theme";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const AllArticles = () => {
   const [articles, setArticles] = useState([]);
@@ -61,8 +58,13 @@ const AllArticles = () => {
           {articles.map((article) => {
             const date = dayjs(article.created_at).format("DD-MM-YYYY");
             return (
-              <Grid item xs={12} sm={6} md={4}>
-                <Card key={article.article_id} sx={{ maxWidth: 345 }}>
+              <Grid key="gridd" item xs={12} sm={6} md={4}>
+                <Card
+                  key={article.article_id}
+                  sx={{ maxWidth: 345 }}
+                  component={Link}
+                  to={`/articles/${article.article_id}`}
+                >
                   <CardMedia
                     component="img"
                     alt="green iguana"
