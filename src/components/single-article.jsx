@@ -3,9 +3,7 @@ import { singleArticle } from "../api";
 import { useParams } from "react-router-dom";
 import Comments from "./comments";
 import dayjs from "dayjs";
-import { Container } from "@mui/material";
-
-// import Votes from "./change-vote";
+import Votes from "./change-vote";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});
@@ -54,10 +52,10 @@ const SingleArticle = () => {
         <section className="article">{article.body}</section>
 
         <br></br>
-        {/* <Votes votes={article.votes} article_id={article_id} /> */}
+        <Votes votes={article.votes} article_id={article_id} />
         <br></br>
 
-        {/* <Comments /> */}
+        <Comments />
       </section>
     );
 };

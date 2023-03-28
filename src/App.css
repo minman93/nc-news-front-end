@@ -55,3 +55,9 @@ padding-right: 400px;
   height: 600px;
   width: 1000px;
 }
+.comment-container {
+
+  text-align: left;
+  padding-left: 400px;
+  padding-right: 500px;
+}
