@@ -3,6 +3,8 @@ import { singleArticle } from "../api";
 import { useParams } from "react-router-dom";
 import Comments from "./comments";
 import dayjs from "dayjs";
+import { Container } from "@mui/material";
+
 // import Votes from "./change-vote";
 
 const SingleArticle = () => {
@@ -38,14 +40,19 @@ const SingleArticle = () => {
   if (isLoading) return <p>Loading...</p>;
   else
     return (
-      <section className="single-article">
-        <li className="article-title">{article.title}</li>
+      <section className="article-layout">
+        <h1>{article.title}</h1>
         <br></br>
-        <img src={article.article_img_url} alt=""></img>
-        <li>Written by: {article.author}</li>
-        <li>Date Added: {date}</li>
         <br></br>
-        <p className="article-text">{article.body}</p>
+        <img className="image" src={article.article_img_url} alt=""></img>
+
+        <br></br>
+        <br></br>
+        <h2>Date: {date}</h2>
+        <h2>Author: {article.author}</h2>
+
+        <section className="article">{article.body}</section>
+
         <br></br>
         {/* <Votes votes={article.votes} article_id={article_id} /> */}
         <br></br>

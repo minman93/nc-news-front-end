@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+h1 {
+font-size: 40px;
+text-align: center;
+padding-left: 400px;
+padding-right: 400px
+}
+.article {
+font-size: 20px;
+text-align: left;
+padding-left: 400px;
+padding-right: 400px;
+}
+.article-layout {
+  text-align: center;
+}
+.image {
+  height: 600px;
+  width: 1000px;
+}
