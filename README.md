@@ -1,7 +1,7 @@
 # Documentation
 **NC News** is a news website that allows a user to read articles, sort articles by topic, upvote or downvote an article, and leave comments.
 
-A link to the deployed version of the website can be found here: https://matt-inman-frontend-project.vercel.app/
+A link to the deployed version of the website can be found here: https://nc-news-front-end.vercel.app/
 
 **ALL ARTICLES** will display a full list of all of the articles on the site. The articltes can be filtered by any of the three categories (Coding, Football and Cooking), and sorted by Author, Votes or Number of Comments.
 
