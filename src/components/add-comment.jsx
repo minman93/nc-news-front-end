@@ -34,7 +34,7 @@ const AddComment = ({ article_id, setComments }) => {
           }}
           id="body"
         ></TextField>
-        <Button size="large" variant="contained">
+        <Button size="large" variant="contained" type="submit">
           Submit Comment!
         </Button>
       </form>
