@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(2),
+  paddingTop: theme.spacing(0),
+  paddingBottom: theme.spacing(5),
   "@media all": {
     minHeight: 100,
   },
@@ -20,7 +20,8 @@ export default function Header() {
       <AppBar position="static">
         <StyledToolbar>
           <Typography
-            variant="h4"
+            variant="h2"
+            textAlign="center"
             noWrap
             component="div"
             sx={{ flexGrow: 1, alignSelf: "flex-end" }}

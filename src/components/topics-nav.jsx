@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import FilterListOutlinedIcon from "@mui/icons-material/FilterListOutlined";
 
 import Button from "@mui/material/Button";
 import AllArticles from "./all-articles";
@@ -26,12 +27,8 @@ const TopicsNav = () => {
         <Toolbar disableGutters>
           <Typography
             variant="h5"
-            noWrap
-            component="a"
-            href=""
             sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
+              display: { textAlign: "center" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -41,6 +38,10 @@ const TopicsNav = () => {
             }}
           ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <FilterListOutlinedIcon
+              fontSize="large"
+              key="filter-icon"
+            ></FilterListOutlinedIcon>
             <Button
               key="all-articles"
               size="large"
