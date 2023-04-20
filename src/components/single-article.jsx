@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import Comments from "./comments";
 import dayjs from "dayjs";
 import Votes from "./change-vote";
+import { Container } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState({});
@@ -38,25 +40,29 @@ const SingleArticle = () => {
   if (isLoading) return <p>Loading...</p>;
   else
     return (
-      <section className="article-layout">
-        <h1>{article.title}</h1>
-        <br></br>
-        <br></br>
-        <img className="image" src={article.article_img_url} alt=""></img>
+      <Container>
+        <Grid>
+          <section>
+            <h1>{article.title}</h1>
+            <br></br>
+            <br></br>
+            <img className="image" src={article.article_img_url} alt=""></img>
 
-        <br></br>
-        <br></br>
-        <h2>Date: {date}</h2>
-        <h2>Author: {article.author}</h2>
+            <br></br>
+            <br></br>
+            <h2>Date: {date}</h2>
+            <h2>Author: {article.author}</h2>
 
-        <section className="article">{article.body}</section>
+            <section>{article.body}</section>
 
-        <br></br>
-        <Votes votes={article.votes} article_id={article_id} />
-        <br></br>
+            <br></br>
+            <Votes votes={article.votes} article_id={article_id} />
+            <br></br>
 
-        <Comments />
-      </section>
+            <Comments />
+          </section>
+        </Grid>
+      </Container>
     );
 };
 export default SingleArticle;

@@ -7,6 +7,7 @@ import { Container } from "@mui/system";
 import { Card } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -33,23 +34,25 @@ const Comments = () => {
           const date = dayjs(comment.created_at).format("DD-MM-YYYY");
 
           return (
-            <section className="comment-container">
-              <Card>
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 20 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    Username: {comment.author}
-                  </Typography>
+            <Container>
+              <Grid key="gridd" item xs={12} sm={6} md={4}>
+                <Card>
+                  <CardContent>
+                    <Typography
+                      sx={{ fontSize: 20 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      Username: {comment.author}
+                    </Typography>
 
-                  <Typography variant="body2" sx={{ fontsize: 16 }}>
-                    {comment.body}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </section>
+                    <Typography variant="body2" sx={{ fontsize: 16 }}>
+                      {comment.body}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Container>
           );
         })}
       </ul>
